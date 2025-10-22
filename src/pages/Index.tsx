@@ -391,43 +391,183 @@ const Index = () => {
           <w:gridCol w:w="4200"/>
         </w:tblGrid>
         <w:tr>
-          <w:tc><w:tcPr><w:tcW w:w="600" w:type="dxa"/></w:tcPr>
+          <w:tc><w:tcPr>
+            <w:tcW w:w="600" w:type="dxa"/>
+            <w:tcMar>
+              <w:top w:w="400" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="400" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
             <w:p><w:r><w:t>i</w:t></w:r></w:p>
           </w:tc>
-          <w:tc><w:tcPr><w:tcW w:w="4200" w:type="dxa"/></w:tcPr>
+          <w:tc><w:tcPr>
+            <w:tcW w:w="4200" w:type="dxa"/>
+            <w:tcMar>
+              <w:top w:w="400" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="400" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
             <w:p><w:r><w:rPr><w:b/></w:rPr><w:t>Survey No</w:t></w:r></w:p>
           </w:tc>
-          <w:tc><w:tcPr><w:tcW w:w="4200" w:type="dxa"/></w:tcPr>
+          <w:tc><w:tcPr>
+            <w:tcW w:w="4200" w:type="dxa"/>
+            <w:tcMar>
+              <w:top w:w="400" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="400" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
             <w:p><w:r><w:t>${escapeXml(doc.surveyNo || '(Survey No)')}</w:t></w:r></w:p>
           </w:tc>
         </w:tr>
         <w:tr>
-          <w:tc><w:p><w:r><w:t>ii</w:t></w:r></w:p></w:tc>
-          <w:tc><w:p><w:r><w:rPr><w:b/></w:rPr><w:t>As per Revenue Record</w:t></w:r></w:p></w:tc>
-          <w:tc><w:p><w:r><w:t>${escapeXml(doc.asPerRevenueRecord || '(As per Revenue Record)')}</w:t></w:r></w:p></w:tc>
+          <w:tc><w:tcPr>
+            <w:tcMar>
+              <w:top w:w="400" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="400" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
+            <w:p><w:r><w:t>ii</w:t></w:r></w:p>
+          </w:tc>
+          <w:tc><w:tcPr>
+            <w:tcMar>
+              <w:top w:w="400" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="400" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
+            <w:p><w:r><w:rPr><w:b/></w:rPr><w:t>As per Revenue Record</w:t></w:r></w:p>
+          </w:tc>
+          <w:tc><w:tcPr>
+            <w:tcMar>
+              <w:top w:w="400" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="400" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
+            <w:p><w:r><w:t>${escapeXml(doc.asPerRevenueRecord || '(As per Revenue Record)')}</w:t></w:r></w:p>
+          </w:tc>
         </w:tr>
         <w:tr>
-          <w:tc><w:p><w:r><w:t>iii</w:t></w:r></w:p></w:tc>
-          <w:tc><w:p><w:r><w:rPr><w:b/></w:rPr><w:t>Total Extent</w:t></w:r></w:p></w:tc>
-          <w:tc><w:p><w:r><w:t>${escapeXml(doc.totalExtent || '(Total Extent)')}</w:t></w:r></w:p></w:tc>
+          <w:tc><w:tcPr>
+            <w:tcMar>
+              <w:top w:w="400" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="400" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
+            <w:p><w:r><w:t>iii</w:t></w:r></w:p>
+          </w:tc>
+          <w:tc><w:tcPr>
+            <w:tcMar>
+              <w:top w:w="400" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="400" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
+            <w:p><w:r><w:rPr><w:b/></w:rPr><w:t>Total Extent</w:t></w:r></w:p>
+          </w:tc>
+          <w:tc><w:tcPr>
+            <w:tcMar>
+              <w:top w:w="400" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="400" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
+            <w:p><w:r><w:t>${escapeXml(doc.totalExtent || '(Total Extent)')}</w:t></w:r></w:p>
+          </w:tc>
         </w:tr>
         <w:tr>
-          <w:tc><w:p><w:r><w:t>iv</w:t></w:r></w:p></w:tc>
-          <w:tc><w:p><w:r><w:rPr><w:b/></w:rPr><w:t>Plot No</w:t></w:r></w:p></w:tc>
-          <w:tc><w:p><w:r><w:t>${escapeXml(doc.plotNo || '(Plot No)')}</w:t></w:r></w:p></w:tc>
+          <w:tc><w:tcPr>
+            <w:tcMar>
+              <w:top w:w="400" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="400" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
+            <w:p><w:r><w:t>iv</w:t></w:r></w:p>
+          </w:tc>
+          <w:tc><w:tcPr>
+            <w:tcMar>
+              <w:top w:w="400" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="400" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
+            <w:p><w:r><w:rPr><w:b/></w:rPr><w:t>Plot No</w:t></w:r></w:p>
+          </w:tc>
+          <w:tc><w:tcPr>
+            <w:tcMar>
+              <w:top w:w="400" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="400" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
+            <w:p><w:r><w:t>${escapeXml(doc.plotNo || '(Plot No)')}</w:t></w:r></w:p>
+          </w:tc>
         </w:tr>
         <w:tr>
-          <w:tc><w:p><w:r><w:t>v</w:t></w:r></w:p></w:tc>
-          <w:tc><w:p><w:r><w:rPr><w:b/></w:rPr><w:t>Location like name of the place, village, city, registration, sub-district etc.</w:t></w:r></w:p></w:tc>
-          <w:tc><w:p><w:r><w:t>${escapeXml(doc.location || '(Location like name of the place, village, city registration, sub-district etc.)')}</w:t></w:r></w:p></w:tc>
+          <w:tc><w:tcPr>
+            <w:tcMar>
+              <w:top w:w="400" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="400" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
+            <w:p><w:r><w:t>v</w:t></w:r></w:p>
+          </w:tc>
+          <w:tc><w:tcPr>
+            <w:tcMar>
+              <w:top w:w="400" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="400" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
+            <w:p><w:r><w:rPr><w:b/></w:rPr><w:t>Location like name of the place, village, city, registration, sub-district etc.</w:t></w:r></w:p>
+          </w:tc>
+          <w:tc><w:tcPr>
+            <w:tcMar>
+              <w:top w:w="400" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="400" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
+            <w:p><w:r><w:t>${escapeXml(doc.location || '(Location like name of the place, village, city registration, sub-district etc.)')}</w:t></w:r></w:p>
+          </w:tc>
         </w:tr>
         <w:tr>
-          <w:tc><w:tcPr><w:gridSpan w:val="3"/></w:tcPr>
-            <w:p><w:r><w:rPr><w:b/></w:rPr><w:t>i) Boundaries for ${escapeXml(doc.totalExtentSqFt || '(Total Extent)')} Sq.Ft of land</w:t></w:r></w:p>
-            <w:p><w:r><w:t>North By - ${escapeXml(doc.northBy || '(North By)')}</w:t></w:r></w:p>
-            <w:p><w:r><w:t>South By - ${escapeXml(doc.southBy || '(South By)')}</w:t></w:r></w:p>
-            <w:p><w:r><w:t>East By - ${escapeXml(doc.eastBy || '(East By)')}</w:t></w:r></w:p>
-            <w:p><w:r><w:t>West By - ${escapeXml(doc.westBy || '(West By)')}</w:t></w:r></w:p>
+          <w:tc><w:tcPr>
+            <w:gridSpan w:val="3"/>
+            <w:tcMar>
+              <w:top w:w="400" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="400" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
+            <w:p><w:r><w:rPr><w:b/><w:u w:val="single"/></w:rPr><w:t>i) Boundaries for ${escapeXml(doc.totalExtentSqFt || '(Total Extent)')} Sq.Ft of land</w:t></w:r></w:p>
+            <w:p><w:r><w:rPr><w:b/><w:u w:val="single"/></w:rPr><w:t>North By</w:t></w:r><w:r><w:t> - ${escapeXml(doc.northBy || '(North By)')}</w:t></w:r></w:p>
+            <w:p><w:r><w:rPr><w:b/><w:u w:val="single"/></w:rPr><w:t>South By</w:t></w:r><w:r><w:t> - ${escapeXml(doc.southBy || '(South By)')}</w:t></w:r></w:p>
+            <w:p><w:r><w:rPr><w:b/><w:u w:val="single"/></w:rPr><w:t>East By</w:t></w:r><w:r><w:t> - ${escapeXml(doc.eastBy || '(East By)')}</w:t></w:r></w:p>
+            <w:p><w:r><w:rPr><w:b/><w:u w:val="single"/></w:rPr><w:t>West By</w:t></w:r><w:r><w:t> - ${escapeXml(doc.westBy || '(West By)')}</w:t></w:r></w:p>
           </w:tc>
         </w:tr>
       </w:tbl>`;
@@ -435,7 +575,7 @@ const Index = () => {
       allTablesXml += mainTableXml;
 
       // Add measurement details heading
-      allTablesXml += '<w:p><w:r><w:rPr><w:b/></w:rPr><w:t>Measurement Details</w:t></w:r></w:p>';
+      allTablesXml += '<w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:rPr><w:b/><w:u w:val="single"/></w:rPr><w:t>Measurement Details</w:t></w:r></w:p>';
 
       // Measurement details table
       const measurementTableXml = `<w:tbl>
@@ -455,34 +595,119 @@ const Index = () => {
           <w:gridCol w:w="4500"/>
         </w:tblGrid>
         <w:tr>
-          <w:tc><w:tcPr><w:shd w:fill="D9D9D9"/></w:tcPr>
-            <w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:rPr><w:b/></w:rPr><w:t>North</w:t></w:r></w:p>
+          <w:tc><w:tcPr>
+            <w:shd w:fill="D9D9D9"/>
+            <w:tcMar>
+              <w:top w:w="320" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="320" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
+            <w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:rPr><w:b/></w:rPr><w:t>North - East West</w:t></w:r></w:p>
           </w:tc>
-          <w:tc><w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:t>${escapeXml(doc.northMeasurement || '(North) ft')}</w:t></w:r></w:p></w:tc>
+          <w:tc><w:tcPr>
+            <w:tcMar>
+              <w:top w:w="320" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="320" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
+            <w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:t>${escapeXml(doc.northMeasurement || '30 ft')}</w:t></w:r></w:p>
+          </w:tc>
         </w:tr>
         <w:tr>
-          <w:tc><w:tcPr><w:shd w:fill="D9D9D9"/></w:tcPr>
-            <w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:rPr><w:b/></w:rPr><w:t>South</w:t></w:r></w:p>
+          <w:tc><w:tcPr>
+            <w:shd w:fill="D9D9D9"/>
+            <w:tcMar>
+              <w:top w:w="320" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="320" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
+            <w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:rPr><w:b/></w:rPr><w:t>South - East West</w:t></w:r></w:p>
           </w:tc>
-          <w:tc><w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:t>${escapeXml(doc.southMeasurement || '(South) ft')}</w:t></w:r></w:p></w:tc>
+          <w:tc><w:tcPr>
+            <w:tcMar>
+              <w:top w:w="320" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="320" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
+            <w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:t>${escapeXml(doc.southMeasurement || '30 ft')}</w:t></w:r></w:p>
+          </w:tc>
         </w:tr>
         <w:tr>
-          <w:tc><w:tcPr><w:shd w:fill="D9D9D9"/></w:tcPr>
-            <w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:rPr><w:b/></w:rPr><w:t>East</w:t></w:r></w:p>
+          <w:tc><w:tcPr>
+            <w:shd w:fill="D9D9D9"/>
+            <w:tcMar>
+              <w:top w:w="320" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="320" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
+            <w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:rPr><w:b/></w:rPr><w:t>East - South North</w:t></w:r></w:p>
           </w:tc>
-          <w:tc><w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:t>${escapeXml(doc.eastMeasurement || '(East) ft')}</w:t></w:r></w:p></w:tc>
+          <w:tc><w:tcPr>
+            <w:tcMar>
+              <w:top w:w="320" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="320" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
+            <w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:t>${escapeXml(doc.eastMeasurement || '40 ft')}</w:t></w:r></w:p>
+          </w:tc>
         </w:tr>
         <w:tr>
-          <w:tc><w:tcPr><w:shd w:fill="D9D9D9"/></w:tcPr>
-            <w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:rPr><w:b/></w:rPr><w:t>West</w:t></w:r></w:p>
+          <w:tc><w:tcPr>
+            <w:shd w:fill="D9D9D9"/>
+            <w:tcMar>
+              <w:top w:w="320" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="320" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
+            <w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:rPr><w:b/></w:rPr><w:t>West - South North</w:t></w:r></w:p>
           </w:tc>
-          <w:tc><w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:t>${escapeXml(doc.westMeasurement || '(West) ft')}</w:t></w:r></w:p></w:tc>
+          <w:tc><w:tcPr>
+            <w:tcMar>
+              <w:top w:w="320" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="320" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
+            <w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:t>${escapeXml(doc.westMeasurement || '40 ft')}</w:t></w:r></w:p>
+          </w:tc>
         </w:tr>
         <w:tr>
-          <w:tc><w:tcPr><w:shd w:fill="D9D9D9"/></w:tcPr>
+          <w:tc><w:tcPr>
+            <w:shd w:fill="D9D9D9"/>
+            <w:tcMar>
+              <w:top w:w="320" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="320" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
             <w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:rPr><w:b/></w:rPr><w:t>Total</w:t></w:r></w:p>
           </w:tc>
-          <w:tc><w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:t>${escapeXml(doc.totalExtentSqFt || '(Total Extent) Sq.Ft')}</w:t></w:r></w:p></w:tc>
+          <w:tc><w:tcPr>
+            <w:tcMar>
+              <w:top w:w="320" w:type="dxa"/>
+              <w:left w:w="300" w:type="dxa"/>
+              <w:bottom w:w="320" w:type="dxa"/>
+              <w:right w:w="300" w:type="dxa"/>
+            </w:tcMar>
+          </w:tcPr>
+            <w:p><w:pPr><w:jc w:val="center"/></w:pPr><w:r><w:t>${escapeXml(doc.totalExtentSqFt || '1200 Sq.Ft')}</w:t></w:r></w:p>
+          </w:tc>
         </w:tr>
       </w:tbl>`;
 

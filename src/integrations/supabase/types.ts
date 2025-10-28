@@ -113,6 +113,44 @@ export type Database = {
         }
         Relationships: []
       }
+      drafts: {
+        Row: {
+          created_at: string
+          documents: Json
+          draft_name: string
+          id: string
+          placeholders: Json
+          template_id: string
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          documents?: Json
+          draft_name: string
+          id?: string
+          placeholders?: Json
+          template_id: string
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          documents?: Json
+          draft_name?: string
+          id?: string
+          placeholders?: Json
+          template_id?: string
+          updated_at?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "drafts_template_id_fkey"
+            columns: ["template_id"]
+            isOneToOne: false
+            referencedRelation: "document_templates"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       history_of_title_templates: {
         Row: {
           created_at: string | null

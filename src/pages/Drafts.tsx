@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { FileText, Trash2, ArrowLeft, Scale } from "lucide-react";
+import { FileText, Trash2, ArrowLeft, Scale, FolderOpen } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { format } from "date-fns";
@@ -50,6 +50,19 @@ const Drafts = () => {
     } finally {
       setIsLoading(false);
     }
+  };
+
+  const handleOpenDraft = (draft: Draft) => {
+    navigate("/work", { 
+      state: { 
+        templateId: draft.template_id,
+        draftId: draft.id,
+        draftData: {
+          placeholders: draft.placeholders,
+          documents: draft.documents
+        }
+      } 
+    });
   };
 
   const handleDeleteDraft = async (draftId: string, draftName: string) => {
@@ -148,13 +161,19 @@ const Drafts = () => {
                       </p>
                       <div className="flex gap-2">
                         <Button
-                          variant="outline"
                           size="sm"
                           className="flex-1"
+                          onClick={() => handleOpenDraft(draft)}
+                        >
+                          <FolderOpen className="mr-2 h-4 w-4" />
+                          Open Draft
+                        </Button>
+                        <Button
+                          variant="outline"
+                          size="sm"
                           onClick={() => handleDeleteDraft(draft.id, draft.draft_name)}
                         >
-                          <Trash2 className="mr-2 h-4 w-4" />
-                          Delete
+                          <Trash2 className="h-4 w-4" />
                         </Button>
                       </div>
                     </CardContent>

@@ -29,14 +29,27 @@ const Index = () => {
     loadDeeds();
     setupRealtimeSubscription();
 
-    // Load template if coming from Templates page
+    // Load template if coming from Templates page or Drafts page
     const state = location.state as {
       templateId?: string;
       templateName?: string;
+      draftId?: string;
+      draftData?: {
+        placeholders: Record<string, string>;
+        documents: DocumentDetail[];
+      };
     } | null;
+    
     if (state?.templateId) {
       setTemplateId(state.templateId);
       loadTemplateFromDatabase(state.templateId, state.templateName);
+      
+      // Load draft data if coming from drafts page
+      if (state.draftData) {
+        setPlaceholders(state.draftData.placeholders);
+        setDocuments(state.draftData.documents);
+        toast.success("Draft loaded successfully");
+      }
     } else {
       // Redirect to templates page if no template is loaded
       navigate("/templates");

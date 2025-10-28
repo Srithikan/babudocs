@@ -299,8 +299,8 @@ const Index = () => {
         .insert({
           template_id: templateId,
           draft_name: draftName,
-          placeholders: placeholders,
-          documents: documents,
+          placeholders: placeholders as any,
+          documents: documents as any,
         })
         .select()
         .single();

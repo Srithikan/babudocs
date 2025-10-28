@@ -9,6 +9,7 @@ import AdminTechverse from "./pages/AdminTechverse";
 import Auth from "./pages/Auth";
 import Templates from "./pages/Templates";
 import UserLogin from "./pages/UserLogin";
+import Drafts from "./pages/Drafts";
 
 const queryClient = new QueryClient();
 
@@ -21,6 +22,7 @@ const App = () => (
         <Routes>
           <Route path="/" element={<UserLogin />} />
           <Route path="/templates" element={<Templates />} />
+          <Route path="/drafts" element={<Drafts />} />
           <Route path="/work" element={<Index />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/admin-techverse" element={<AdminTechverse />} />

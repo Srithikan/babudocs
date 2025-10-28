@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Upload, FileText, Trash2, Download, Plus, LogOut, Scale, LogIn } from "lucide-react";
+import { Upload, FileText, Trash2, Download, Plus, LogOut, Scale, LogIn, Save } from "lucide-react";
 import { toast } from "sonner";
 import { supabase } from "@/integrations/supabase/client";
 import { format } from "date-fns";
@@ -178,14 +178,24 @@ const Templates = () => {
                 <p className="text-blue-100 text-sm">Professional Document Generation System</p>
               </div>
             </div>
-            <Button 
-              variant="outline"
-              onClick={() => navigate("/auth")}
-              className="bg-white/10 text-white border-white/20 hover:bg-white/20 hover:text-white"
-            >
-              <LogIn className="mr-2 h-4 w-4" />
-              Admin Login
-            </Button>
+            <div className="flex gap-3">
+              <Button 
+                variant="outline"
+                onClick={() => navigate("/drafts")}
+                className="bg-white/10 text-white border-white/20 hover:bg-white/20 hover:text-white"
+              >
+                <Save className="mr-2 h-4 w-4" />
+                Drafts
+              </Button>
+              <Button 
+                variant="outline"
+                onClick={() => navigate("/auth")}
+                className="bg-white/10 text-white border-white/20 hover:bg-white/20 hover:text-white"
+              >
+                <LogIn className="mr-2 h-4 w-4" />
+                Admin Login
+              </Button>
+            </div>
           </div>
         </div>
       </header>

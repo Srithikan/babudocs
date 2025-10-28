@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { FileText, Download, Scale, ArrowLeft } from "lucide-react";
+import { FileText, Download, Scale, ArrowLeft, Save } from "lucide-react";
 import TemplateUpload from "@/components/TemplateUpload";
 import PlaceholderInputs from "@/components/PlaceholderInputs";
 import DeedsTable, { Deed } from "@/components/DeedsTable";
@@ -24,6 +24,7 @@ const Index = () => {
   const [deeds, setDeeds] = useState<Deed[]>([]);
   const [documents, setDocuments] = useState<DocumentDetail[]>([]);
   const [templateName, setTemplateName] = useState("");
+  const [templateId, setTemplateId] = useState<string | null>(null);
   useEffect(() => {
     loadDeeds();
     setupRealtimeSubscription();
@@ -34,6 +35,7 @@ const Index = () => {
       templateName?: string;
     } | null;
     if (state?.templateId) {
+      setTemplateId(state.templateId);
       loadTemplateFromDatabase(state.templateId, state.templateName);
     } else {
       // Redirect to templates page if no template is loaded
@@ -282,6 +284,36 @@ const Index = () => {
       toast.error("Failed to generate document");
     }
   };
+
+  const handleSaveAsDraft = async () => {
+    if (!templateId) {
+      toast.error("No template loaded");
+      return;
+    }
+
+    try {
+      const draftName = `Draft - ${templateName} - ${new Date().toLocaleDateString()}`;
+      
+      const { data, error } = await supabase
+        .from("drafts")
+        .insert({
+          template_id: templateId,
+          draft_name: draftName,
+          placeholders: placeholders,
+          documents: documents,
+        })
+        .select()
+        .single();
+
+      if (error) throw error;
+
+      toast.success("Draft saved successfully");
+    } catch (error) {
+      console.error("Error saving draft:", error);
+      toast.error("Failed to save draft");
+    }
+  };
+
   const escapeXml = (text: string): string => {
     return text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&apos;');
   };
@@ -767,7 +799,11 @@ const Index = () => {
             <CardTitle>Export Report</CardTitle>
             <CardDescription>Download or email the generated legal scrutiny report</CardDescription>
           </CardHeader>
-          <CardContent>
+          <CardContent className="flex gap-3">
+            <Button onClick={handleSaveAsDraft} variant="outline" className="shadow-md transition-all duration-200 hover:shadow-lg">
+              <Save className="mr-2 h-4 w-4" />
+              Save as Draft
+            </Button>
             <Button onClick={handleDownload} className="bg-primary hover:bg-primary/90 shadow-md transition-all duration-200 hover:shadow-lg">
               <Download className="mr-2 h-4 w-4" />
               Download as PDF/Word
